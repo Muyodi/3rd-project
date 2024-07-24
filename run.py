@@ -11,7 +11,7 @@ from words import words_list
 
 #function of the game play and rules!
 
-def play_game(word_list):
+def play_game():
     print("Welcome to the English-Italian translation game!")
     print("Translate the English word to Italian.Type'exit' to quit.\n") 
 
@@ -24,3 +24,18 @@ def play_game(word_list):
 
     for english_word in english_words:
         italian_translation = words[english_word]
+
+        user_translation = input(f"What is the Italian word for'{english_word}'? ").strip().lower()
+        if user_translation == "exit":
+            break
+
+        if user_translation == italian_translation:
+            print("Correct!\n")
+            score += 1
+
+        else:
+            print(f"Wrong. The correct translation is '{italian_translation}'.\n")
+            print(f"Game Over! Your final score is {score}out of {len(english_words)}.")
+
+            #Start the game
+            play_game()

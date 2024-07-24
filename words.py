@@ -1,3 +1,5 @@
+
+#Dictionary of English words and their Italian translations
 words_list = [
  "Apple", "Mela" ,  "Banana", "Banana" , 
        "Egg", "Uovo" ,  "Chicken", "Pollo" ,   

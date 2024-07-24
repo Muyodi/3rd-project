@@ -6,8 +6,28 @@
 
 
 import random 
-
 from words import words_list
+
+
+words = {
+"Apple": "Mela",
+"Banana": "Banana", 
+"Egg": "Uovo",  
+"Chicken": "Pollo",   
+"Fish": "Pesce",  
+"Shrimp": "Gamberetto", 
+"Juice": "Succo",  
+"Water": "Acqua",  
+"Skirt": "Gonna",
+"Hat": "Cappello", 
+"Belt": "Cintura",  
+"Wood": "Legno", 
+"Moon": "Luna", 
+"Cold": "Freddo",
+"Month": "Mese"
+
+}
+
 
 #function of the game play and rules!
 
@@ -38,4 +58,4 @@ def play_game():
             print(f"Game Over! Your final score is {score}out of {len(english_words)}.")
 
             #Start the game
-            play_game()
+play_game()

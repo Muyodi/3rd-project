@@ -39,7 +39,7 @@ translations = {
 def is_valid_input(user_input):
     return user_input.isalpha()
 
-def play_game():
+def main_game():
     # Randomly select 10 words from the dictionary for the game
     words = random.sample(list(translations.keys()), 10)
     score = 0
@@ -57,9 +57,9 @@ def play_game():
 
     print(f"Game over!/Gioco finito Your score is {score} out of 10.")
     
-def main_game():
+def play_game():
      while True:
-        main_game()
+        main_game() #Call the main game function
         while True:
             play_again = input("Do you want to continue/Gioca ancora? (yes/no):").strip().lower()
             if play_again in ('yes', 'no'):

@@ -5,57 +5,57 @@
 #importing words from word_list
 
 
-import random 
-from words import words_list
 
+import random
 
-words = {
-"Apple": "Mela",
-"Banana": "Banana", 
-"Egg": "Uovo",  
-"Chicken": "Pollo",   
-"Fish": "Pesce",  
-"Shrimp": "Gamberetto", 
-"Juice": "Succo",  
-"Water": "Acqua",  
-"Skirt": "Gonna",
-"Hat": "Cappello", 
-"Belt": "Cintura",  
-"Wood": "Legno", 
-"Moon": "Luna", 
-"Cold": "Freddo",
-"Month": "Mese"
-
+# Dictionary of English-Italian translations
+translations = {
+    "apple": "mela",
+    "banana": "banana",
+    "orange": "arancia",
+    "grape": "uva",
+    "strawberry": "fragola",
+    "water": "acqua",
+    "milk": "latte",
+    "bread": "pane",
+    "cheese": "formaggio",
+    "butter": "burro",
+    "car": "macchina",
+    "bicycle": "bicicletta",
+    "bus": "autobus",
+    "train": "treno",
+    "airplane": "aeroplano",
+    "egg": "uovo",  
+    "chicken": "pollo",   
+    "fish": "pesce",  
+    "shrimp": "gamberetto", 
+    "juice": "succo",  
+    "hat": "cappello", 
+    "belt": "cintura",  
+    "wood": "legno", 
+    "moon": "luna", 
+    "cold": "freddo"
 }
-
-
-#function of the game play and rules!
+def is_valid_input(user_input):
+    return user_input.isalpha()
 
 def play_game():
-    print("Welcome to the English-Italian translation game!")
-    print("Translate the English word to Italian.Type'exit' to quit.\n") 
+    # Randomly select 10 words from the dictionary for the game
+    words = random.sample(list(translations.keys()), 10)
+    score = 0
 
-    #Shuffle the words
+    print("Welcome/Benvenuti to the English-Italian Translator Game!")
+    print("Translate the following words from English to Italian:")
 
-    english_words = list(words.keys())
-    random.shuffle(english_words)
-
-    score = 0 
-
-    for english_word in english_words:
-        italian_translation = words[english_word]
-
-        user_translation = input(f"What is the Italian word for'{english_word}'? ").strip().upper()
-        if user_translation == "exit":
-            break
-
-        if user_translation == italian_translation:
-            print("Correct!\n")
+    for word in words:
+        user_translation = input(f"Translate '{word}' to Italian: ").strip().lower()
+        if user_translation == translations[word]:
+            print("Correct!")
             score += 1
-
         else:
-            print(f"Wrong. The correct translation is '{italian_translation}'.\n")
-            print(f"Game Over! Your final score is {score}out of {len(english_words)}.")
+            print(f"Incorrect! The correct translation is '{translations[word]}'.")
 
-            #Start the game
-play_game()
+    print(f"Game over!/Gioco finito Your score is {score} out of 10.")
+
+if __name__ == "__main__":
+    play_game()

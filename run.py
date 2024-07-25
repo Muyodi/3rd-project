@@ -50,12 +50,26 @@ def play_game():
     for word in words:
         user_translation = input(f"Translate '{word}' to Italian: ").strip().lower()
         if user_translation == translations[word]:
-            print("Correct!")
+            print("Correct!/Giusto")
             score += 1
         else:
-            print(f"Incorrect! The correct translation is '{translations[word]}'.")
+            print(f"Incorrect!/Sbagliato The correct translation is '{translations[word]}'.")
 
     print(f"Game over!/Gioco finito Your score is {score} out of 10.")
+
+def play_game():
+    while True:
+        main_game()
+        while True:
+            paly_again = input("Do you want to continue/Gioca ancora? (yes/no):").strip().lower()
+            if play_again in ('yes', 'no'):
+                break
+            print("Invalid input.Please type 'yes' or 'no'.")
+
+        if play_again == 'no':
+            print("Thanks/Grazie! Goodbye/Arrivedeci!")
+            break    
+
 
 if __name__ == "__main__":
     play_game()

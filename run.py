@@ -44,8 +44,8 @@ def main_game():
     words = random.sample(list(translations.keys()), 10)
     score = 0
 
-    print("Welcome/Benvenuti to the English-Italian Translator Game:Learn italian having fun.")
-    print("Translate the following words from English to Italian:" "Improve your italian with us:")
+    print("Welcome/Benvenuti to the English-Italian Translator Game:Learn Italian having fun.")
+    print("Translate the following words from English to Italian:" "Improve your Italian with us:")
 
     for word in words:
         user_translation = input(f"Translate '{word}' to Italian: ").strip().lower()

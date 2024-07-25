@@ -45,7 +45,7 @@ def play_game():
     for english_word in english_words:
         italian_translation = words[english_word]
 
-        user_translation = input(f"What is the Italian word for'{english_word}'? ").strip().lower()
+        user_translation = input(f"What is the Italian word for'{english_word}'? ").strip().upper()
         if user_translation == "exit":
             break
 

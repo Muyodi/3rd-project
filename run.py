@@ -68,7 +68,7 @@ def play_game():
 
         if play_again == 'no':
             print("Thanks/Grazie! Goodbye/Arrivedeci!")
-            break    
+            break
 
 
 if __name__ == "__main__":

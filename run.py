@@ -48,7 +48,10 @@ def register_user():
             age = int(age)
             break
         else:
-            print("Invalid age.Please enter valid number.")    
+            print("Invalid age.Please enter valid number.")
+
+    print(f"Thank you, {name}! you are now registered.")
+    return name, age            
 
 def main_game():
     # Randomly select 10 words from the dictionary for the game

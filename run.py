@@ -39,6 +39,17 @@ translations = {
 def is_valid_input(user_input):
     return user_input.isalpha()
 
+def register_user():
+    print("Register to start!")
+    name = input("Please enter your name: ").strip()
+    while True:
+        age = input("Please enter your age: ").strip()
+        if age.isdigit() and int(age) > 0:
+            age = int(age)
+            break
+        else:
+            print("Invalid age.Please enter valid number.")    
+
 def main_game():
     # Randomly select 10 words from the dictionary for the game
     words = random.sample(list(translations.keys()), 10)

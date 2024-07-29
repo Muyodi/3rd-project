@@ -7,7 +7,7 @@ English to Italian game translater.
 The game is created to help italian lover users to improve their italian while having fun at the same time.
 
 # Key Information for the site:
-Any user of any age can access the game witout registration.
+Any user of any age can access the game with only name  registration.
 User get scores completting the game.
 
 # Functions:
@@ -19,7 +19,7 @@ Give correct answer incase of wrong answer.
 Client goals:
 A simple stranslator that anyone can use.
 The program has no limitation of age 
-No registration needed.
+Only name registration needed.
 
 # Returning vistor goals:
 A pleasant user experience.
@@ -36,8 +36,8 @@ User is asked if they wish to continue palying or exit the game.
 
 # main Menu:
 The main menu gives users options;
-Enter their anser
-Analyse the answer
+Enter their name
+Enter their answer
 respond correct or wrong
 give right answer if wrong
 give scores
@@ -52,6 +52,12 @@ Github - To save and store files
 Heroku - To deploy and run the project
 Readme - to give Excelent format to produce this table.
 
+# validated on CI pythone linter
+![CI Python Linter](images/python-linter-screenshot.png)
+
+# credits
+tuttor Marko
+Mentor Sheryl 
 
 
 

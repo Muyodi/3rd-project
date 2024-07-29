@@ -2,8 +2,7 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
-#importing words from word_list
-
+# importing words from word_list
 
 
 import random
@@ -25,19 +24,22 @@ translations = {
     "bus": "autobus",
     "train": "treno",
     "airplane": "aeroplano",
-    "egg": "uovo",  
-    "chicken": "pollo",   
-    "fish": "pesce",  
-    "shrimp": "gamberetto", 
-    "juice": "succo",  
-    "hat": "cappello", 
-    "belt": "cintura",  
-    "wood": "legno", 
-    "moon": "luna", 
+    "egg": "uovo",
+    "chicken": "pollo",
+    "fish": "pesce",
+    "shrimp": "gamberetto",
+    "juice": "succo",
+    "hat": "cappello",
+    "belt": "cintura",
+    "wood": "legno",
+    "moon": "luna",
     "cold": "freddo"
 }
+
+
 def is_valid_input(user_input):
     return user_input.isalpha()
+
 
 def register_user_name():
     while True:
@@ -48,28 +50,31 @@ def register_user_name():
         else:
             print("Invalid input.Name cannot be empty.Please try again")
 
+
 def main_game(name):
     print(f"Hello {name}, let's start playing the game!")
 
+
 def main_game():
- #Randomly select 10 words from the Dictionary for the game
+    # Randomly select 10 words from the Dictionary for the game
     words = random.sample(list(translations.keys()), 10)
     score = 0
 
-    print("Welcome/Benvenuti to the English-Italian Translator Game: Learn Italian having fun.")
-    print("Translate the following words from English to Italian:" "Improve your Italian with us:")
+    print("Welcome/Benvenuti to the English-Italian Translator Game:"
+          "\n" "Learn Italian having fun.")
+    print("Translate the following words from English to Italian:"
+          "\n" "Improve your Italian with us:")
 
     for word in words:
         user_translation = input(f"Translate '{word}' to Italian: ").strip().lower()
         if user_translation == translations[word]:
             print("Correct!/Giusto")
             score += 1
-        else:
-            print(f"Incorrect!/Sbagliato The correct translation is '{translations[word]}'.")
+    else:
+        print(f"Incorrect!/Sbagliato The correct translation is'{translations[word]}'.")
+        print(f"Game over!/Gioco finito. Your score is {score} out of 10.")
 
-    print(f"Game over!/Gioco finito Your score is {score} out of 10.")
 
-    
 def play_game():
     name = register_user_name()
     while True:
@@ -84,11 +89,6 @@ def play_game():
                     print("Thanks/Grazie! Goodbye/Arrivedeci!")
                     break #Breaks the inner loop
                     break
-                
-
-            
-
-        # if play_again == 'no': break #Break the outer loop to stop playing
 
 
 if __name__ == "__main__":

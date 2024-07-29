@@ -68,12 +68,12 @@ def main_game():
             print(f"Incorrect!/Sbagliato The correct translation is '{translations[word]}'.")
 
     print(f"Game over!/Gioco finito Your score is {score} out of 10.")
-    main_game()
+
     
 def play_game():
     name = register_user_name()
     while True:
-        main_game(name) #Call the main game function
+        main_game() #Call the main game function
         while True:
             play_again = input("Do you want to continue/Gioca ancora? (yes/no):").strip().lower()
             if play_again in ('yes', 'no'):
@@ -83,7 +83,8 @@ def play_game():
         if play_again == 'no':
                     print("Thanks/Grazie! Goodbye/Arrivedeci!")
                     break #Breaks the inner loop
-                    break #Break the outer loop to stop playing
+                    break
+                
 
             
 

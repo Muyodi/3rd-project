@@ -48,16 +48,15 @@ def register_user_name():
         else:
             print("Invalid input.Name cannot be empty.Please try again")
 
-            
-
-    
+def main_game(name):
+    print(f"Hello {name}, let's start playing the game!")
 
 def main_game():
-    #Randomly select 10 words from the Dictionary for the game
+ #Randomly select 10 words from the Dictionary for the game
     words = random.sample(list(translations.keys()), 10)
     score = 0
 
-    print("Welcome/Benvenuti to the English-Italian Translator Game:Learn Italian having fun.")
+    print("Welcome/Benvenuti to the English-Italian Translator Game: Learn Italian having fun.")
     print("Translate the following words from English to Italian:" "Improve your Italian with us:")
 
     for word in words:
@@ -72,20 +71,23 @@ def main_game():
     main_game()
     
 def play_game():
-     while True:
-        main_game() #Call the main game function
+    name = register_user_name()
+    while True:
+        main_game(name) #Call the main game function
         while True:
             play_again = input("Do you want to continue/Gioca ancora? (yes/no):").strip().lower()
             if play_again in ('yes', 'no'):
-
-                if play_again == 'no':
-                    print("Thanks/Grazie! Goodbye/Arrivedeci!")
-                    break #Breaks the inner loop
-                break   #Break the inner loop to play again
-
+                break
             print("Invalid input.Please type 'yes' or 'no'.")
 
-        if play_again == 'no': break #Break the outer loop to stop playing
+        if play_again == 'no':
+                    print("Thanks/Grazie! Goodbye/Arrivedeci!")
+                    break #Breaks the inner loop
+                    break #Break the outer loop to stop playing
+
+            
+
+        # if play_again == 'no': break #Break the outer loop to stop playing
 
 
 if __name__ == "__main__":

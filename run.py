@@ -39,15 +39,20 @@ translations = {
 def is_valid_input(user_input):
     return user_input.isalpha()
 
-def register_user():
-    print("Register to start!")
-    name = input("Please enter your name: ").strip()
-    print(f"Thank you, {name}! you are now registered.")
-    return name,
+def register_user_name():
+    while True:
+        name = input("Please enter your name: ").strip()
+        if name:
+            print(f"Thank you, {name}! you are now registered.")
+            return name
+        else:
+            print("Invalid input.Name cannot be empty.Please try again")
+
+            
 
     
 
-def main_game(name):
+def main_game():
     #Randomly select 10 words from the Dictionary for the game
     words = random.sample(list(translations.keys()), 10)
     score = 0
@@ -68,7 +73,7 @@ def main_game(name):
     
 def play_game():
      while True:
-        main_game(name) #Call the main game function
+        main_game() #Call the main game function
         while True:
             play_again = input("Do you want to continue/Gioca ancora? (yes/no):").strip().lower()
             if play_again in ('yes', 'no'):
